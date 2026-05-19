@@ -78,7 +78,8 @@
 * **IT & System Administrators:** Maintain security, user access, and system reliability.
 
 > **❖ CONTEXT MODEL**
-> *(Placeholder for Context Model Diagram)*
+
+<img src="images/2. Context Model.png">
 
 ---
 
