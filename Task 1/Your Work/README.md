@@ -222,28 +222,9 @@ The SMS is a standalone web application integrating with external services such 
 ## 4. System Models
 
 > -   **CONTEXT DIAGRAM**  
->     _Depicting users (Admin, Teacher, Student, Parent) interacting with SMS_
->     
 
-> -   **ACTIVITY DIAGRAM**  
->     _Showing student enrollment, attendance marking, and grade updates_
->     
+<img src="images/ChatGPT Image May 19, 2026, 04_46_25 AM.png">
 
-> -   **USE CASE DIAGRAMS**  
->     _Admin, Teacher, Student, Parent interactions with SMS functionalities_
->     
-
-> -   **SEQUENCE DIAGRAM**  
->     _Example: Teacher updating grades triggers notifications to student & parent_
->     
-
-> -   **ENTITY-RELATIONSHIP DIAGRAM**  
->     _Entities: Students, Teachers, Classes, Subjects, Grades, Attendance_
->     
-
-> -   **STATE DIAGRAM**  
->     _Student record states: Enrolled → Active → Graduated / Withdrawn_
->     
 
 ----------
 
