@@ -8,7 +8,7 @@ class Button implements Clickable {
 }
 public class Main {
     public static void main(String[] args) {
-        Button button = new Button();
-        button.onClick();
+        Button b=new Button();
+        b.onClick();
     }
 }
