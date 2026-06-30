@@ -1,32 +1,41 @@
-interface OptimizableModel {
-
-    void quantize();
+interface MessageSender{
+    void sendMessage(String message);
 }
-class ResNet18 implements OptimizableModel {
+class EmailSender implements MessageSender{
 
     @Override
-    public void quantize(){
-        System.out.println("Applying int8 quantization for ResNet-18.");
+    public void sendMessage(String message){
+        System.out.println("Sending email: "+message);
     }
 }
-class MobileNet implements OptimizableModel {
+class SMSSender implements MessageSender{
     @Override
-    public void quantize() {
-        System.out.println("Applying dynamic quantization for MobileNet.");
+    public void sendMessage(String message){
+        System.out.println("Sending SMS: "+message);
     }
 }
-class InferenceEngine{
-    public void optimizeModel(OptimizableModel model){
-        model.quantize();
+class NotificationService{
+    private MessageSender messageSender;
+    public NotificationService(MessageSender messageSender){
+        this.messageSender=messageSender;
     }
+    public void alterUser(String msg){
+        messageSender.sendMessage(msg);
+    }
+
 }
-public class Main2{
+
+
+
+public class Main3 {
     public static void main(String[] args) {
-        InferenceEngine engine = new InferenceEngine();
-        OptimizableModel resnet = new ResNet18();
-        OptimizableModel mobile=new MobileNet();
+        MessageSender email = new EmailSender();
+        NotificationService emailNotification= new NotificationService(email);
+        emailNotification.alterUser("Welcome to our service.");
 
-         engine.optimizeModel(resnet);
-         engine.optimizeModel(mobile);
+
+        MessageSender sms= new SMSSender();
+        NotificationService smsNotification = new NotificationService(sms);
+        smsNotification.alterUser ("Your OTP is 123345");
     }
 }
